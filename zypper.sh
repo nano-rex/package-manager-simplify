@@ -1,14 +1,11 @@
-# Dandified (package manager)
-
-## Groups
-dnf grouplist -v
+# Pacman
 
 ## Find a package
-dnf search <package>
+pacman -Q <package>
 
 =
 ## Install a package
-dnf install <package>
+pacman -S <package>
 
 =
 ## List upgradable packages
@@ -18,15 +15,17 @@ pacman -Qu
 pacman -S <package>
 
 ## Upgrade every packages
-dnf update                 equivalent to apt update && apt upgrade (--sync --refresh --sysupgrade)
+pacman -Syu                 equivalent to apt update && apt upgrade (--sync --refresh --sysupgrade)
 
 =
 ## Remove a package along with its dependencies
-dnf rm <package>           equivalent to apt purge (--remove --nosave --recursive)
+zypper rm <package> --clean-deps       equivalent to apt purge (--remove --nosave --recursive)
 
 =
 ## Remove dependencies
-dnf autoremove             equivalent to apt autoremove (--query --deps --unrequired --quiet)
+zypper packages --orphaned
+zypper packages --unneeded
+equivalent to apt autoremove (--query --deps --unrequired --quiet)
 
 =
 ## Remove all packages in cache
