@@ -29,5 +29,5 @@ Get-Package -Name *vlc*
 # remove
 Uninstall-Package -Name sysinternals
 
-cmd.exe /c "C:\Program Files\GIMP 2\uninst\unins000.exe" /VERYSILENT /NORESTART
+#cmd.exe /c "C:\Program Files\GIMP 2\uninst\unins000.exe" /VERYSILENT /NORESTART
 
