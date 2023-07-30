@@ -1,7 +1,7 @@
-# Pacman
+# Portage for Gentoo derivative distributions
 
 ## Find a package
-pacman -Q <package>
+emerge -Q <package>
 
 =
 ## Install a package
